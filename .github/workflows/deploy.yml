@@ -4,6 +4,12 @@ on:
   push:
     branches:
       - master
+  workflow_dispatch:
+    inputs:
+      tags:
+        description: 'manually trigger'
+        required: false
+        type: boolean
 
 jobs:
   deploy:
